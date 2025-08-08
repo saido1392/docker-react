@@ -9,5 +9,6 @@ RUN npm run build
 
 # Run phase
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 # dont need to put provide cmd instruction for primary command as starting nginx is already the primary command of base nginx
